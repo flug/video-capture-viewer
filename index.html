@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.1/build/pure-min.css"
+        integrity="sha384-nr8Zg0FGuy2mHjSDEtlFTk1UAYPogC1fcXsXwpshTY+BexlZFHQ99ruU/jL77qd7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="capture/flux.js"></script>
+    <meta charset="UTF-8">
+    <title>Capture Video Viewer</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+
+<body>
+
+    <div class="pure-g">
+        <nav role="navigation" class="menu">
+            <div id="menuToggle">
+                <!--
+              A fake / hidden checkbox is used as click reciever,
+              so you can use the :checked selector on it.
+              -->
+                <input type="checkbox" />
+
+                <!--
+              Some spans to act as a hamburger.
+              
+              They are acting like a real hamburger,
+              not that McDonalds stuff.
+              -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <!--
+              Too bad the menu has to be inside of the button
+              but hey, it's pure CSS magic.
+              -->
+                <ul id="menu">
+                    <li>
+                        Audio :
+                        <select name="" id="audioSource" class="pure-input-1-2"></select></li>
+                    <li>
+                        Video :
+                        <select name="" id="videoSource" class="pure-input-1-2"></select>
+                    </li>
+
+                    <li>
+                        <button type="button" id="fullScreenMode">FullScreen</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="pure-u">
+
+            <video autoplay style="width: 100%;height: 100vh;"></video>
+        </div>
+    </div>
+
+</body>
+
+</html>
